@@ -1,14 +1,14 @@
 /******************************************************************************
- *  Execution       :   1. default node         cmd> node CashCounter.js 
- *                      2. if nodemon installed cmd> nodemon CashCounter.js
+ *  Execution       :   1. default node         cmd> node BankCashCounter.js 
+ *                      2. if nodemon installed cmd> nodemon BankCashCounter.js
  * 
  *  Purpose         : Implement module for people to either deposit or withdraw
                       money and maintain the cash balance.  
  * 
  *  @description    
  * 
- *  @file           : CashCounter.js
- *  @overview       : CashCounter module to implement module for people to either deposit or withdraw
+ *  @file           : BankCashCounter.js
+ *  @overview       : BankCashCounter module to implement module for people to either deposit or withdraw
                       money and maintain the cash balance.
  *  @module         : CashCounter - This is optional if expeclictly its an npm or local package
  *  @author         : Parmeshwar Raut

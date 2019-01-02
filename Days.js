@@ -67,17 +67,17 @@ module.exports = {
 
         var mon = new Array(7);
 
-        for (var i = 00; i <= 7; i++) {
+        for (var i = 0; i <= 7; i++) {
             mon[i] = new Array(7);
         }
         var weekdays = day;
 
-        for (i = 00; i < 7; i++) {
-            for (j = 00; j < 7; j++) {
+        for (i = 0; i < 7; i++) {
+            for (j = 0; j < 7; j++) {
                 mon[i][j] = 0
             }
         }
-        for (var i = 00; i <= month; i++) {
+        for (var i = 0; i <= month; i++) {
             if (month == i)
                 console.log(monthNames[i])
             var nd = dayPerMonth[i]
@@ -86,14 +86,14 @@ module.exports = {
         console.log('Number of days in month:- ', nd);
 
         console.log(dayNames.toString(''));
-        var count = 00;
-        var j = 00;
+        var count = 0;
+        var j = 0;
         var days = day - 1
         var max = nd;
 
         var min = 1;
-        for (i = 00; i < 7; i++) {
-            for (j =00; j < 7; j++) {
+        for (i = 0; i < 7; i++) {
+            for (j =0; j < 7; j++) {
 
                 {
                     if (min <= max)
