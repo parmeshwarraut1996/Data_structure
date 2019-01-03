@@ -15,9 +15,18 @@
  *
  ******************************************************************************/
 var utility = require("./Days.js");
-month=+process.argv[2];
-year=+process.argv[3];
-
-var day = utility.dayOfWeek((month), (year));
-console.log(day);
-utility.display(month, day, year);
+function input() {
+    /**
+     * Take two command line arguments that are month and year. 
+     */
+    month = +process.argv[2];
+    year = +process.argv[3];
+    /**
+     * pass month and year to dayOfWeek() method
+     */
+    var day=utility.dayOfWeek((month), (year));
+    /**
+     * Display days in month 
+     */
+    utility.display(month, day, year);
+} input();

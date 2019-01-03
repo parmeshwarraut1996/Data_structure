@@ -34,26 +34,19 @@ bank();
 function bank() {
 
     console.log(' 1) Insert a person in Queue \n 2) Remove a person from Queue \n 3) Exit ');
-
-
     userInput.question('Enter  your choice = ', (ch) => {
-
-        input(ch);
-
+    input(ch);
     });
 
     /*function to give user choice*/
 
     function input(ch) {
-    this.amount = 100000;
-
-
+        this.amount = 100000;
+            
         if (ch == 1) {
-
             console.log(' 1) Deposit  cash \n 2) Withdraw cash');
             userInput.question('Enter your choice = ', (c) => {
                 if (c == 1) {
-
                     userInput.question('Enter amount to deposite = ', (amnt) => {
                         this.amount += parseInt(amnt);
                         console.log('Amount deposited = ' + this.amount);
@@ -62,33 +55,23 @@ function bank() {
                     });
                 }
                 if (c == 2) {
-
                     userInput.question('Enter amount to be  withdraw = ', (amnt) => {
                         if (this.amount < amnt) {
-                            console.log('Insufficent balance');
-
-
-
-                        } else {
+                            console.log('Insufficent balance ');
+                        }
+                        else {
                             this.amount -= parseInt(amnt);
                             console.log('Amount withdrawn = ' + amnt);
-                            console.log("Remainig amount = "+this.amount);
+                            console.log("Remainig amount = " + this.amount);
                             q.enqueue(amnt);
                             bank();
                         }
 
                     });
-
                 }
-
-
-
             });
 
         }
-
-
-
         if (ch == 2) {
             if (q.isEmpty() == true) {
                 console.log(" !!!! Queue empty !!!!")
@@ -103,9 +86,8 @@ function bank() {
 
 
         if (ch == 3) {
-            q.exit(ch);
             
-            
+
         }
     }
 }

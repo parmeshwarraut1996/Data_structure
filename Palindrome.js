@@ -30,50 +30,71 @@ var userInput = readline.createInterface({
     output: process.stdout
 });
 
+function input() {
 
-const d = new list.Deque();
-var arr = new Array();
-var answer = '';
-var flag = true;
-var i;
-var rev;
-userInput.question('Enter string to check  is palindrome or not = ', (str) => {
-    toArray(str);
-});
-function toArray(str) {
-
-
-    answer = str;
-
-    arr = answer.split('');
-    var len = arr.length;
-    console.log("Input String = "+answer);
-
-   add(arr, len);
-}
-function add(arr, len) {
-    for (i = 0; i < len; i++) {
-        d.addRear(arr[i])
+    const d = new list.Deque();
+    var arr = new Array();
+    var answer = '';
+    var flag = true;
+    var i;
+    var rev;
+    userInput.question('Enter string to check is palindrome or not = ', (str) => {
+        toArray(str);
+        userInput.close();
+    });
+    /**
+     * split user input string in array 
+     */
+    function toArray(str) {
+        answer = str;
+        /**
+         * split string in array
+         */
+        arr = answer.split('');
+        /**
+         * find out lenth of array
+         */
+        var len = arr.length;
+        /**
+         * display input string 
+         */
+        console.log("Input String = " + answer);
+        /**
+         * call add() method which return reverse of string
+         */
+        reverse(arr, len);
     }
-    rev = d.print();
-    console.log("Reverse string = "+rev);
-    var result = isPalindrome(rev);
+    function reverse(arr, len) {
+        for (i = 0; i < len; i++) {
+            d.addRear(arr[i])
+        }
+        /**
+         * invoke print() method of deque data structure to print string in reverse order
+         */
+        rev = d.print();
+        console.log("Reverse string = " + rev);
+        /**
+         * pass that reverse string to palindrome() method for checking palindrome or not. 
+         */
+        var result = isPalindrome(rev);
 
-
-}
-
-function isPalindrome(rev) {
-    if (rev === answer) {
-        console.log("Given String is Palindrome");
 
     }
-    else {
-        console.log("Given string is not palindrome ");
 
+    function isPalindrome(rev) {
+        /** 
+         * check entered string is palindrome or not 
+        */
+        if (rev === answer) {
+            //if both string is equal then print entered string is palindrome
+
+            console.log("Given String is Palindrome");
+
+        }
+        else {
+            //if both string is not equal then print entered string is not palindrome
+            console.log("Given string is not palindrome ");
+
+        }
     }
-
-
-
-
-
-}
+}input();

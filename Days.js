@@ -98,7 +98,7 @@ module.exports = {
                 {
                     if (min <= max)
                         if (i == 0 && j <= days)
-                            mon[i][j] = "   ";
+                            mon[i][j] = "  ";
                         else {
 
                             mon[i][j] = min;
@@ -107,7 +107,7 @@ module.exports = {
                 }
             }
         }
-        for (i = 0; i < 7; i++) {
+        for (i = 0; i < 6; i++) {
             for (j = 0; j < 7; j++) {
             
                 util.print(mon[i][j] + " ");

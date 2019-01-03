@@ -25,39 +25,69 @@ var utility = require("./BinarySearchTree.js");
  * @param {object} readline 
  * @var {object} userInput 
  */
+function input() {
+    var userInput = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    /**
+     * Take user input to obtain numbers of binary search tree 
+     */
+    userInput.question('Enter the number of nodes = ', (node) => {
+        /**
+         * call method bst() to return numbers of binary search tree 
+         */
 
-var userInput = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-userInput.question('Enter the number of nodes = ', (node) => {
-
-    bst(node);
+        bst(node);
+        /**
+         * close userInput interface
+         */
+        userInput.close();
 
 
-});
+    });
 
-/**function for taking values and performing operation*
- * @var intoTwo is for 2*n
- * @var one is for 1+n;
- * 
- */
+    /**function for taking values and performing operation*
+     * @var intoTwo is for 2*n
+     * @var one is for 1+n;
+     * 
+     */
 
-function bst(node) {
-    var value = parseInt(node);
-    var num = 2 * value;
-    num = utility.factorial(num);
-    
-    var a = value + 1;
-    
-    a = utility.factorial(a);
-    
+    function bst(node) {
+        var value = parseInt(node);
+        /**
+         * Get integer value input and multiply by 2
+         */
+        var num = 2 * value;
+        /**
+         * calculate factorial of that number 
+         */
+        num = utility.factorial(num);
+        /**
+         * add one in userinput value
+         */
+        var a = value + 1;
+        /**
+         * calculate factorial of recent number
+         */
+        a = utility.factorial(a);
 
-    var n = value;
-    n = utility.factorial(n)
+        /**
+         * assign userInput value to another variable n 
+         */
+        var n = value;
+        /**
+         * calculate factorial of user input number
+         */
+        n = utility.factorial(n)
 
-   
-    var result = num / (a * n);
-    console.log('Number of binary seach tree = '+result);
-}
+        /**
+         * calculate numbers of binary search tree  are obtain.
+         */
+        var result = num / (a * n);
+        /**
+         * Display result
+         */
+        console.log('Number of binary seach tree = ' + result);
+    }
+} input();
