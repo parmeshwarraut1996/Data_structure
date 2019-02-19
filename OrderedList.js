@@ -1,10 +1,24 @@
-/*  Purpose         :To perform operations on the list from  given file elements. 
- *  @file           : Orderedlist.js
- *  @author         : Shubham navale
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node OrderedList.js 
+ *                      2. if nodemon installed cmd> nodemon OrderedList.js
+ * 
+ *  Purpose         : Take list of numbres from file, arrange in ascending order in linked list.
+ *                    Take user input to find emlement in file, if found then pop up else add  element in file at 
+ *                    its proper location
+ * 
+ *  @description    
+ * 
+ *  @file           : OrderedList.js
+ *  @overview       : OrderedList module to Take list of numbres from file, arrange in ascending order in linked list.
+ *                    Take user input to find emlement in file, if found then pop up else add  element in file at
+ *                    its proper location.
+                      money and maintain the cash balance.
+ *  @module         : OrderedList - This is optional if expeclictly its an npm or local package
+ *  @author         : Parmeshwar Raut
  *  @version        : 1.0
- *  @since          : 7-12-18
- */
-
+ *  @since          : 31-12-2018
+ *
+ ******************************************************************************/
 
 /*
  *readline module provides an interface for reading data from a Readable stream one line 
@@ -54,7 +68,7 @@ function ifnot(value) {
         console.log('Already in the list  ');
         console.log("So removed element from list");
         ll.remove(value);
-      //  ll.pop();
+      
         console.log();
         ll.print();
     }
@@ -65,7 +79,7 @@ function ifnot(value) {
         console.log();
         ll.print();
     }
-   // var data = "";
+    var data = "";
    
 
 }

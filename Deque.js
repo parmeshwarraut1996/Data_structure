@@ -1,3 +1,19 @@
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node Palindrome.js 
+ *                      2. if nodemon installed cmd> nodemon Palindrome.js
+ * 
+ *  Purpose         : To determine given string is palindrome or not.
+ * 
+ *  @description    
+ * 
+ *  @file           : Palindrome.js
+ *  @overview       : Palindrome module to check whether string is palindrome or not.
+ *  @module         : Palindrome - This is optional if expeclictly its an npm or local package
+ *  @author         : Parmeshwar Raut
+ *  @version        : 1.0
+ *  @since          : 31-12-2018
+ *
+ ******************************************************************************/
 class Node {
     constructor(value, next, prev) {
         this.value = value;
@@ -6,11 +22,18 @@ class Node {
     }
 }
 
+/**
+ * create class Deque
+ */
 class Deque {
     constructor() {
         this.head = null;
         this.tail = null;
     }
+    /**
+     * 
+     * function addFront(item) defines add element at front of queue
+     */
 
     addFront(item) {
         const newNode = (item, null, this.tail);
@@ -22,7 +45,10 @@ class Deque {
         }
         this.tail = newNode;
     }
-
+/**
+ * 
+ * function addRear(item) defines add element at rear of queue 
+ */
     addRear(item) {
         const newNode = new Node(item, this.head, null);
         if (this.head) {
@@ -33,6 +59,9 @@ class Deque {
         }
         this.head = newNode;
     }
+    /**
+     * remove element from front of queue
+     */
 
     removeFront() {
         if (!this.tail) {
@@ -48,6 +77,9 @@ class Deque {
         }
         return value;
     }
+    /**
+     * remove element from rear of queue
+     */
 
     removeRear() {
         if (!this.head) {
@@ -64,7 +96,9 @@ class Deque {
         }
         return value;
     }
-
+/**
+ * return size of queue
+ */
     size() {
         let counter = 0;
         let current = this.head;
@@ -74,10 +108,15 @@ class Deque {
         }
         return counter;
     }
-
+/**
+ * if queue size is zero then queue is empty
+ */
     isEmpty() {
         return this.size() < 1;
     }
+    /**
+     * return reverse of string 
+     */
 
     print() {
         var current = this.head;

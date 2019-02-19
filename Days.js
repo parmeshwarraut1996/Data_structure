@@ -1,3 +1,19 @@
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node Calender.js 
+ *                      2. if nodemon installed cmd> nodemon Calender.js
+ * 
+ *  Purpose         : Display days in month to take command line input month and year .
+ * 
+ *  @description    
+ * 
+ *  @file           : Calender.js
+ *  @overview       : Calender module to Display days in month to take command line input month and year.
+ *  @module         : Calender - This is optional if expeclictly its an npm or local package
+ *  @author         : Parmeshwar Raut
+ *  @version        : 1.0
+ *  @since          : 02-01-2019
+ *
+ ******************************************************************************/
 var util = require('util');
 module.exports = {
     dayOfWeek(month,year) {

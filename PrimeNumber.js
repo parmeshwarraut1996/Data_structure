@@ -1,3 +1,19 @@
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node Prime.js 
+ *                      2. if nodemon installed cmd> nodemon Prime.js
+ * 
+ *  Purpose         : Print prime numbers from 0-1000 range.  
+ * 
+ *  @description    
+ * 
+ *  @file           : Prime.js
+ *  @overview       : Prime module to print prime numbers from 0-1000.
+ *  @module         : Prime - This is optional if expeclictly its an npm or local package
+ *  @author         : Parmeshwar Raut
+ *  @version        : 1.0
+ *  @since          : 2-01-2019
+ *
+ ******************************************************************************/
 var util=require('util');
 module.exports = {
 
@@ -22,30 +38,9 @@ module.exports = {
 
         }
         
-      //console.log(primeNumber.join(' '));
-        return primeNumber;
+      console.log(primeNumber.join(' '));
+      //  return primeNumber;
         
     },
-    // isAnagram(arr) {
-    //     var a = new Array();
-    //     var x = 0;
-    //     for (var i = 0; i < arr.length; i++) {
-    //         for (j = i + 1; j < arr.length; j++) {
-    //             var p = '' + parseInt(arr[i]);
-    //             var q = '' + parseInt(arr[j]);
-    //             if ((((p.split('')).sort()).join()) === (((q.split()).sort()).join())) {
-    //                 str = (p + '' + q);
-    //                 a.push(str);
-    //                 str = "";
-    //                 arr2[x] = p;
-    //                 x++;
-    //                 arr2[x] = q;
-    //                 x++;
-    //             }
-    //         }
-    //     }
-    //     return a;
-    // }
-
-
+   
 }

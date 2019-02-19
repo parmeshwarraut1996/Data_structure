@@ -29,12 +29,12 @@ var userInput = readline.createInterface(
 var arr1=new Array();
 userInput.question('Enter minimum value of range =', (min) => {
     userInput.question('Enter maximum value of range = ', (max) => {
-        var prime=utility.range(min, max)
-        console.log(prime);
+        utility.range(min, max)
+       // console.log(prime);
         
 userInput.close();
 
     });
 
-})
+});
 

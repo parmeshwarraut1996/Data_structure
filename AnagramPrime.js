@@ -46,7 +46,7 @@ module.exports = {
             var ch = string1.charAt(index);
             if (ch >= 'a' && ch <= 'z') {
                 var code = ch.charCodeAt(0);
-
+                
                 arr[code - 97]++;
             } else if (ch >= 'A' && ch <= 'Z') {
                 var code = ch.charCodeAt(0);
@@ -127,7 +127,7 @@ module.exports = {
 
             }
         }
-        console.log(" Numbers are prime and anagram  = ");
+        console.log(" Numbers are prime and anagram  =  ");
         for (let i = 0; i < array.length; i++) {
             util.print("   [ ");
             for (let j = 0; j < array[i].length; j++) {
@@ -150,6 +150,5 @@ module.exports = {
         console.log("\n");
 
     },
-
-
+    
 }

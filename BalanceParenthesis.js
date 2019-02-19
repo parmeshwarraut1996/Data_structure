@@ -28,10 +28,12 @@ var userInput = readline.createInterface(
     });
 
 function input() {
-
+/**
+ * take user input as expression
+ */
     userInput.question(" Enter expression = ", (exp) => {
         x.isBalance(exp);
-        userInput.close();
+        userInput.close();//close userInput interface
     });
 
 } input();

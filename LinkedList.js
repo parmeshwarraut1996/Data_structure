@@ -1,4 +1,4 @@
-/* structure class node for ever node in linked list*/
+/*  class node for ever node in linked list*/
 
 class Node {
 
